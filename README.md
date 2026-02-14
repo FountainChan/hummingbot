@@ -91,6 +91,29 @@ If you encounter issues or have questions, here's how you can get assistance:
 
 We pledge that we will not use the information/data you provide us for trading purposes nor share them with third parties.
 
+## Tools: 合成回测与交互式绘图
+
+仓库包含一个轻量的工具用于在不启动完整 Hummingbot 客户端的情况下生成回测数据并绘制交互式 K 线图：
+
+- `tools/run_synthetic_backtest.py`：生成合成或基于价格 CSV 的回测结果（CSV 格式），模拟 `scripts/utility/backtest_mm_example.py` 的输出列（包含 `buy_amount`/`sell_amount` 等），并可选择调用绘图工具生成 HTML 可视化。示例用法：
+
+```bash
+# 生成 720 根蜡烛并同时绘制 HTML
+/workspaces/hummingbot/.venv/bin/python tools/run_synthetic_backtest.py --out data/synth_backtest_full.csv --periods 720 --plot
+
+# 使用已有价格 CSV 生成回测并绘图
+/workspaces/hummingbot/.venv/bin/python tools/run_synthetic_backtest.py --input-price data/sample_prices.csv --out data/backtest_from_prices.csv --plot
+```
+
+- `tools/backtest_plot.py`：读取回测 CSV（期望包含 `open,high,low,close,timestamp` 和可选 `buy_amount`/`sell_amount`），将结果绘制为交互式 Plotly HTML（可在浏览器打开）。示例：
+
+```bash
+# 绘制回测 CSV（支持 glob）
+/workspaces/hummingbot/.venv/bin/python tools/backtest_plot.py --csv data/backtest_*.csv --out backtest_plot.html
+```
+
+生成的示例文件（由 CI/本地测试生成）位于 `data/`：`data/synth_backtest_full.csv` 与 `data/synth_backtest_full.html`。
+
 ## Exchange Connectors
 
 Hummingbot connectors standardize REST and WebSocket API interfaces to different types of exchanges, enabling you to build sophisticated trading strategies that can be deployed across many exchanges with minimal changes.
