@@ -60,6 +60,7 @@ def main():
         "objgraph",
         "pandas>=2.3.2",
         "pandas-ta>=0.4.71b",
+        "plotly>=5.0.0",
         "prompt_toolkit>=3.0.39",
         "protobuf>=4.23.3",
         "psutil>=5.9.5",
