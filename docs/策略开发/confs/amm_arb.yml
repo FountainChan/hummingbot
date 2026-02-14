@@ -1,0 +1,11 @@
+## AMM Arbitrage 示例配置
+# 说明：在 AMM 与中心化交易所之间捕捉价差的套利示例。
+
+amm_connector: uniswap
+amm_pool: "ETH-USDT"
+exchange_connector: binance_paper_trade
+trading_pair: ETH-USDT
+order_amount: 0.05
+slippage_tolerance_bps: 50
+min_profit_bps: 20
+paper_trade_enabled: true

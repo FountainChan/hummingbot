@@ -1,0 +1,11 @@
+## Avellaneda Market Making 示例配置
+# 说明：基于 Avellaneda-Stoikov 模型的做市配置。
+
+connector: binance_paper_trade
+trading_pair: BTC-USDT
+order_amount: 0.01
+risk_aversion: 0.1  # 模型风险厌恶参数，越高越保守
+volatility_estimation_window: 60  # 用于估计价格波动的秒数窗口
+inventory_target_base_pct: 0.5
+max_order_count: 2
+paper_trade_enabled: true

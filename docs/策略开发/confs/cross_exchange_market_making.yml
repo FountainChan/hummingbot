@@ -1,0 +1,10 @@
+## Cross-Exchange Market Making 示例配置
+# 说明：跨交易所做市/套利，示例包含两个交易所连接器。
+
+primary_connector: binance_paper_trade
+secondary_connector: coinbase_paper_trade
+trading_pair: ETH-USDT
+order_amount: 0.1
+spread_threshold_bps: 12
+sync_balances: true
+paper_trade_enabled: true

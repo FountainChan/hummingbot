@@ -1,0 +1,10 @@
+## Liquidity Mining 示例配置
+# 说明：为特定市场提供流动性并追踪激励。
+
+connector: binance_paper_trade
+trading_pair: TOKEN-USDT
+order_amount: 100
+target_spread_bps: 25
+reward_token: HBOT
+reward_schedule: daily
+paper_trade_enabled: true

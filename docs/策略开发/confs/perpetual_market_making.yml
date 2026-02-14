@@ -1,0 +1,12 @@
+## Perpetual Market Making 示例配置
+# 说明：用于永续合约做市，注意风险与保证金参数。
+
+connector: okx_paper_trade
+trading_pair: BTC-USDT
+order_amount: 0.001
+bid_spread_bps: 8
+ask_spread_bps: 8
+leverage: 5
+max_position: 1.0  # 最大持仓量（基础币）
+maintenance_margin_threshold: 0.2
+paper_trade_enabled: true

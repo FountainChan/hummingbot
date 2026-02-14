@@ -1,0 +1,14 @@
+## Pure Market Making 示例配置
+# 说明：基础做市策略配置示例。复制到 conf/ 下并按需修改。
+
+connector: binance_paper_trade
+trading_pair: ETH-USDT
+order_amount: 0.1
+bid_spread_bps: 10
+ask_spread_bps: 10
+fee_bps: 10
+paper_trade_enabled: true
+time_interval: 60  # 以秒为单位的更新周期
+inventory_skew_enabled: true
+inventory_target_base_pct: 0.5
+max_order_count: 2

@@ -1,0 +1,10 @@
+## Hedge（对冲）示例配置
+# 说明：把主要市场头寸对冲到另一市场或衍生品市场。
+
+connector: binance_paper_trade
+trading_pair: ETH-USDT
+hedge_connector: coinbase_paper_trade
+hedge_trading_pair: ETH-USDT
+hedge_ratio: 1.0  # 对冲比例（1.0 表示全额对冲）
+order_amount: 0.5
+paper_trade_enabled: true
